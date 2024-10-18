@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+            http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://www.springframework.org/schema/context
+            http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+            
+            <bean id = "myStudent" class = "spring_01.Student">
+            	<property name="name" value = "Raj"></property>
+            	<property name="subs">
+            		<list>
+	            		<value>Math</value>
+	            		<value>Physics</value>
+	            		<value>Chemistry</value>
+	            		<value>Biology</value>
+            		</list>
+            	</property>
+            	<property name="subMarks">
+	            	<map>
+		            	<entry key ="Math" value="88"></entry>
+		            	<entry key ="Physics" value="85"></entry>
+		            	<entry key ="Chemistry" value="65"></entry>
+		            	<entry key ="Biology" value="60"></entry>
+	            	</map>
+            	</property>
+            	<property name="t" ref = "myTrainer"></property>
+            </bean>
+            
+            <bean id = "myTrainer" class="spring_01.Trainer">
+            	<property name="name" value = "Sandeep"></property>
+            </bean>
+
+</beans>
